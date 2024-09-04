@@ -1,2 +1,7 @@
-# exhibition-curator
-Repository for Tech Returners project
+#Tech Returners SMART Gallery
+
+#Tech Stack:
+Typescript, React, Vite
+
+#APIs Used:
+
