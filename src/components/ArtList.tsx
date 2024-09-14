@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 import { ArtCard } from "./ArtCard";
-import { getMetArtIds } from "../utils/getMetArtIds";
-
+import { getChicagoArt } from "../utils/getChicagoArt";
+import { ChicagoArtObject } from "../contexts/ChicagoArtContext";
 
 export const ArtList = () => {
-  const [metArtIDsArray, setMetArtIDsArray] = useState<number[]>([]);
+  const [chicagoArt, setChicagoArt] = useState<ChicagoArtObject[]>([]);
   useEffect(() => {
-    getMetArtIds().then((metArtIdData: number[]) => {
-      setMetArtIDsArray(metArtIdData);
+    getChicagoArt().then((data) => {
+      setChicagoArt(data);
     });
   }, []);
   return (
     <div>
-      <p>This is the art list.</p>
-      <ArtCard />
+      {chicagoArt.map((artObject: ChicagoArtObject)=>{
+        return <ArtCard key={artObject.id} artObject={artObject}/>
+      })}
     </div>
   );
 };
