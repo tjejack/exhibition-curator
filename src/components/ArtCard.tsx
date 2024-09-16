@@ -1,13 +1,16 @@
 import { ChicagoArtObject } from "../contexts/ChicagoArtContext";
+import { ClevelandArtObject } from "../contexts/ClevelandArtContext";
 
 interface Props {
-  artObject: ChicagoArtObject;
+  chicagoArtObject?: ChicagoArtObject;
+  clevelandArtObject?: ClevelandArtObject;
 }
 
 export const ArtCard = (props: Props) => {
   return (
     <div>
-      <p>{props.artObject.title}</p>
+      {props.chicagoArtObject ? <p>props.chicagoArtObject.title</p> : null}
+      {props.clevelandArtObject ? <p>props.clevelandArtObject.title</p> : null}
     </div>
   );
 };
