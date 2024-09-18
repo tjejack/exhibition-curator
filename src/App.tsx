@@ -4,13 +4,11 @@ import { HomePage } from "./components/HomePage";
 import { NotFound } from "./components/NotFound";
 import { ArtExplore } from "./components/ArtExplore";
 import { ExhibitionPage } from "./components/ExhibitionPage";
-import { NavBar } from "./components/NavBar";
 
 function App() {
   return (
     <>
       <Header />
-      <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/art" element={<ArtExplore />} />
