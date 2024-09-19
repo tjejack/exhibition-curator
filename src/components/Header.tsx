@@ -16,11 +16,11 @@ export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-green-300">
+    <header className="bg-emerald-500 h-50">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
-            <h1>SmArt Gallery</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-black sm:text-xl">SmArt Gallery</h1>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -52,10 +52,10 @@ export const Header = () => {
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-lime-200">
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-emerald-300">
           <div className="flex items-center justify-between">
             <a href="/" className="-m-1.5 p-1.5">
-            <h1>SmArt Gallery</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-black sm:text-xl">SmArt Gallery</h1>
             </a>
             <button
               type="button"
@@ -71,19 +71,19 @@ export const Header = () => {
               <div className="space-y-2 py-6">
                 <a
                   href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-green-300"
                 >
                   Home
                 </a>
                 <a
                   href="/art"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-green-300"
                 >
                   Explore Art
                 </a>
                 <a
                   href="/exhibitions/temp"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-green-300"
                 >
                   My Exhibition
                 </a>
@@ -91,7 +91,7 @@ export const Header = () => {
               <div className="py-6">
                 <a
                   href="Login"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-green-300"
                 >
                   Log in
                 </a>

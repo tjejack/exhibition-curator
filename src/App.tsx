@@ -7,7 +7,7 @@ import { ExhibitionPage } from "./components/ExhibitionPage";
 
 function App() {
   return (
-    <>
+    <div id="content" className="flex h-screen flex-col">
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -18,7 +18,7 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
