@@ -7,8 +7,8 @@ export const ArtExplore = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   return (
     <div>
-      <Search />
-      <ArtList />
+      <Search searchParams={searchParams} setSearchParams={setSearchParams}/>
+      <ArtList searchParams={searchParams}/>
       <PaginationUI searchParams={searchParams} setSearchParams={setSearchParams}/>
     </div>
   );
