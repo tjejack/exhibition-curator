@@ -14,7 +14,7 @@ export const getChicagoArt = (props: SearchQueries) => {
           id: artwork.id,
           title: artwork.title,
           artist: artwork.artist_title,
-          image: `https://www.artic.edu/iiif/2/${artwork.image_id ? artwork.image_id : "NOIMG"}/full/843,/0/default.jpg`,
+          image: `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`,
           date: artwork.date_end,
           api: "Chicago",
         })
