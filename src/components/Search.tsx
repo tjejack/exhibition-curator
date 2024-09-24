@@ -1,7 +1,7 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
-import { SetURLSearchParams } from "react-router-dom";
-import { SearchSortBy } from "./SearchSortBy";
+import { SetURLSearchParams, useNavigate } from "react-router-dom";
 import { SearchTextQuery } from "./SearchTextQuery";
+import { useState } from "react";
 
 interface Props {
   searchParams: URLSearchParams;
@@ -9,24 +9,28 @@ interface Props {
 }
 
 export const Search = (props: Props) => {
+  const [textQuery, setTextQuery] = useState<string>("");
+  const navigate = useNavigate();
+  function handleReset(){
+    navigate('/art')
+  }
   return (
-    <div className="mx-auto max-w-2xl px-4 py-8 sm:px-1 sm:py-10 lg:max-w-7xl lg:px-8">
+    <form className="mx-auto max-w-2xl px-4 py-8 sm:px-1 sm:py-10 lg:max-w-7xl lg:px-8">
       <div className="min-w-0 flex-1">
         <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">
           Search Art
         </h2>
-
         <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
           <div className="mt-2 flex items-center">
-            <SearchTextQuery />
-            <SearchSortBy />
+            <SearchTextQuery textQuery={textQuery} setTextQuery={setTextQuery}/>
           </div>
         </div>
       </div>
       <div className="mt-5 flex lg:ml-4 lg:mt-0">
         <span className="hidden sm:block">
           <button
-            type="button"
+            type="reset"
+            onClick={handleReset}
             className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
           >
             Clear Search
@@ -34,7 +38,7 @@ export const Search = (props: Props) => {
         </span>
         <span className="sm:ml-3">
           <button
-            type="button"
+            type="submit"
             className="inline-flex items-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
           >
             <MagnifyingGlassIcon
@@ -45,6 +49,6 @@ export const Search = (props: Props) => {
           </button>
         </span>
       </div>
-    </div>
+    </form>
   );
 };
