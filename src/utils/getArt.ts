@@ -6,15 +6,19 @@ import { getClevelandArt } from "./getClevelandArt";
 interface Props {
   page: string | null;
   limit: string | null;
+  q: string | null;
 }
 
 export async function getArt(props: Props) {
-  const searchQueries: SearchQueries = { page: "1", limit: "10" };
+  const searchQueries: SearchQueries = { page: "1", limit: "10", };
   if (props.page !== null && !isNaN(parseInt(props.page))) {
     searchQueries.page = props.page;
   }
   if (props.limit !== null && !isNaN(parseInt(props.limit))) {
-    searchQueries.limit = `${parseInt(props.limit) / 2}`;
+    searchQueries.limit = `${Math.ceil(parseInt(props.limit) / 2)}`;
+  }
+  if(props.q !== null){
+    searchQueries.q = props.q;
   }
   const chicagoArt = await getChicagoArt(searchQueries);
   const clevelandArt = await getClevelandArt(searchQueries);
