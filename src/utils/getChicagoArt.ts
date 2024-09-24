@@ -5,8 +5,12 @@ import { SearchQueries } from "../contexts/SearchQueries";
 
 
 export const getChicagoArt = (props: SearchQueries) => {
+  let queryString = ""
+  if(props.q){
+    queryString = `&q=${props.q}`
+  }
   return axios
-    .get(`https://api.artic.edu/api/v1/artworks?limit=${props.limit}&page=${props.page}`)
+    .get(`https://api.artic.edu/api/v1/artworks/search?fields=id,title,artist_title,image_id,date_end&limit=${props.limit}&page=${props.page}${queryString}`)
     .then(({ data }) => {
       const dataArray: ArtObject[] | PromiseLike<ArtObject[]> = [];
       data.data.forEach((artwork: ChicagoArtObject) =>
