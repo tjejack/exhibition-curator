@@ -18,7 +18,7 @@ export const Header = () => {
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
-            <h1 className="text-2xl font-bold tracking-tight text-black sm:text-xl">SmArt Gallery</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-black sm:text-2xl">SmArt Gallery</h1>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -42,18 +42,13 @@ export const Header = () => {
             My Exhibition
           </a>
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/login" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-emerald-300">
           <div className="flex items-center justify-between">
             <a href="/" className="-m-1.5 p-1.5">
-            <h1 className="text-2xl font-bold tracking-tight text-black sm:text-xl">SmArt Gallery</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-black sm:text-2xl">SmArt Gallery</h1>
             </a>
             <button
               type="button"
@@ -84,14 +79,6 @@ export const Header = () => {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-green-300"
                 >
                   My Exhibition
-                </a>
-              </div>
-              <div className="py-6">
-                <a
-                  href="/login"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-green-300"
-                >
-                  Log in
                 </a>
               </div>
             </div>
