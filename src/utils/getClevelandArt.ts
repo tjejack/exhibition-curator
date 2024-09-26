@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ArtObject } from "../contexts/ArtObject";
-import { ClevelandArtObject } from "../contexts/ClevelandArtContext";
+import { ClevelandArtObject } from "../contexts/ClevelandArtObject";
 import { SearchQueries } from "../contexts/SearchQueries";
 
 export const getClevelandArt = (props: SearchQueries) => {
