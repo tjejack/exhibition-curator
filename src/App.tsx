@@ -4,6 +4,7 @@ import { HomePage } from "./components/HomePage";
 import { NotFound } from "./components/NotFound";
 import { ArtExplore } from "./components/ArtExplore";
 import { ExhibitionPage } from "./components/ExhibitionPage";
+import { ArtPage } from "./components/ArtPage";
 
 function App() {
   return (
@@ -12,6 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/art" element={<ArtExplore />} />
+        <Route
+          path="/art/:artwork_api/:artwork_id"
+          element={<ArtPage />}
+        />
         <Route
           path="/exhibitions/:exhibition_id"
           element={<ExhibitionPage />}
