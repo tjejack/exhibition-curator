@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ArtObject } from "../contexts/ArtObject";
-import { ChicagoArtObject } from "../contexts/ChicagoArtContext";
+import { ChicagoArtObject } from "../contexts/ChicagoArtObject";
 import { SearchQueries } from "../contexts/SearchQueries";
 
 
