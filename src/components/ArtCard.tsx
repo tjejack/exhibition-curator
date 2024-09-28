@@ -11,6 +11,7 @@ interface Props {
 
 export const ArtCard = (props: Props) => {
   const [isFave, setIsFave] = useState<boolean>(false);
+  const [isImgError, setIsImgError] = useState<boolean>(false);
   function changeExhibitionStatus(isAdd: boolean) {
     setIsFave(isAdd);
     if (isAdd) {
@@ -39,21 +40,29 @@ export const ArtCard = (props: Props) => {
     } else {
       setIsFave(false);
     }
+    const myExhibition: string = JSON.stringify(props.tempExhibition);
+    localStorage.setItem("myExhibition", myExhibition);
   }, [isFave, props.artObject.api, props.artObject.id, props.tempExhibition]);
   return (
     <div key={props.artObject.id} className="group relative">
       <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 lg:h-80">
         <a href={`/art/${props.artObject.api}/${props.artObject.id}`}>
-          <img
-            alt={props.artObject.title}
-            src={props.artObject.image}
-            className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-          />
+          {isImgError ? (
+            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 inline-flex items-center justify-center group-hover:opacity-75 h-80">
+              <p>Image Unavailable</p>
+            </div>
+          ) : (
+            <img
+              alt={props.artObject.title}
+              src={props.artObject.image}
+              onError={() => {
+                setIsImgError(true);
+              }}
+              className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+            />
+          )}
         </a>
       </div>
-      {/* <div className="aspect-h-1 aspect-w-1 w-full h-full overflow-hidden rounded-md bg-gray-200 inline-flex items-center justify-center lg:aspect-none group-hover:opacity-75 lg:h-80">
-          <p>Image Unavailable</p>
-        </div> */}
       <div className="mt-4 flex justify-between">
         <div>
           <h3 className="text-sm text-gray-700">{props.artObject.title}</h3>
