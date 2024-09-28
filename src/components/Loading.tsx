@@ -1,7 +1,7 @@
 export const Loading = () => {
-    return (
-        <div>
-            <p>Loading...</p>
-        </div>
-    )
-}
+  return (
+    <div className="py-3 text-center text-xl">
+      <p>Loading...</p>
+    </div>
+  );
+};
