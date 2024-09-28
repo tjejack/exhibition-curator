@@ -1,10 +1,3 @@
-#Tech Returners SMART Gallery
-
-#Tech Stack:
-Typescript, React, Vite
-
-#APIs Used:
-
 # Tech Returners SmArt Gallery
 For the 'Software Engineering Graduate - Exhibition Curator' Project
 
@@ -60,6 +53,20 @@ Once you have cloned the repository and installed all of the necessary dependenc
 Then, simply follow the link provided in your terminal, which should look something like
 
 ```http://localhost:5173```
+
+# Tech Stack:
+TypeScript: https://www.typescriptlang.org/
+React: https://react.dev/
+Vite: https://vitejs.dev/
+TailwindCSS: https://tailwindcss.com/
+Axios: https://axios-http.com/
+HeadlessUI: https://headlessui.com/
+HeroIcons: https://heroicons.com/
+VSCode: https://code.visualstudio.com/
+Vercel: https://vercel.com/
+PostCSS: https://postcss.org/
+AutoPrefixer: https://github.com/postcss/autoprefixer
+
 
 # This repository requires node v21.2.0.
 
