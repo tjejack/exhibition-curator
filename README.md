@@ -56,15 +56,25 @@ Then, simply follow the link provided in your terminal, which should look someth
 
 # Tech Stack:
 TypeScript: https://www.typescriptlang.org/
+
 React: https://react.dev/
+
 Vite: https://vitejs.dev/
+
 TailwindCSS: https://tailwindcss.com/
+
 Axios: https://axios-http.com/
+
 HeadlessUI: https://headlessui.com/
+
 HeroIcons: https://heroicons.com/
+
 VSCode: https://code.visualstudio.com/
+
 Vercel: https://vercel.com/
+
 PostCSS: https://postcss.org/
+
 AutoPrefixer: https://github.com/postcss/autoprefixer
 
 
