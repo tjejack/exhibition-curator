@@ -10,9 +10,12 @@ export const HomePage = () => {
             <p className="mt-6 text-md leading-8 text-black">
             To get started, why not head on over to the Explore Art tab on your nav bar?
             </p>
-            <p className="mt-6 text-sm leading-8 text-gray-800">
+            <p className="my-6 text-sm leading-8 text-gray-800">
             This project was built by Tj Jack (he/him) for the Tech Returners program.
             </p>
+            <a href="https://github.com/tjejack/exhibition-curator" className="text-sm underline italic">
+            Find the GitHub page for this website here!
+            </a>
           </div>
         </div>
       </div>
