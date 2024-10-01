@@ -55,6 +55,10 @@ Then, simply follow the link provided in your terminal, which should look someth
 ```http://localhost:5173```
 
 # Tech Stack:
+Art Institute of Chicago API: https://api.artic.edu/docs/
+
+Cleveland Museum of Art Open Access API: https://openaccess-api.clevelandart.org/
+
 TypeScript: https://www.typescriptlang.org/
 
 React: https://react.dev/
